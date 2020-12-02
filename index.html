@@ -10,10 +10,12 @@
     //window.repro.isInAppBrowser = /MY_CUSTOM_USER_AGENT/.test(navigator.userAgent);
 </script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/marx/2.0.4/marx.css">
+<script src="//cdn.reproio.com/js/v4/repro.js" type="text/javascript" charset="utf-8"></script>
 <script>
   !function(o,e,n){var r=[];if(window.reproio)console.info("Repro Web SDK was loaded more than once");else{window.reproio=function(){r.push(arguments)};var i=o.createElement(e),t=o.getElementsByTagName(e)[0];i.src="https://cdn.reproio.com/web/v2/repro-sdk.min.js",i.async=!0,i.crossOrigin="",i.onload=function(){window.reproio("setSnippetVersion","2.1"),r.forEach(function(o){window.reproio.apply(window.reproio,o)})},t.parentNode.insertBefore(i,t)}}(document,"script");
   reproio("setup", "d97a5582-f50b-43b8-9cf6-e672bfe70096");
   reproio("track","PageView");
+  repro.track("user review", { rating: 3 });
      // Exit intent
 function addEvent(obj, evt, fn) {
     if (obj.addEventListener) {
